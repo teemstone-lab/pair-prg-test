@@ -1,0 +1,21 @@
+{
+  "transform": {
+    "^.+\\.js$": "babel-jest",
+    "^.+\\.ts$": "ts-jest",
+    "^.+\\.svelte$": [
+      "svelte-jester",
+      {
+        "preprocess": true
+      }
+    ],
+    ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+  },
+  "moduleNameMapper": {
+    "^.+\\.svg$": "jest-svg-transformer"
+  },
+  "moduleFileExtensions": ["svelte", "js", "ts"],
+  "testEnvironment": "jsdom",
+  "testPathIgnorePatterns": ["node_modules"],
+  "transformIgnorePatterns": ["node_modules"],
+  "setupFilesAfterEnv": ["@testing-library/jest-dom/extend-expect"]
+}
