@@ -1,13 +1,13 @@
-name: Check the source code in the repository
+name: Test the source code in the repository
 on:
   push:
     branches: [main]
 jobs:
-  code-check:
+  code-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Install modules
         run: npm i
-      - name: Run ESLint
-        run: npm run lint
+      - name: Run Jest
+        run: npm run test
