@@ -47,8 +47,3 @@ test('X 버튼을 클릭하면 창을 닫는 기능을 동작시킨다.', async 
   const afterWindowCount = results.getAllByRole('gridcell').length
   expect(beforeWindowCount - 1).toEqual(afterWindowCount)
 })
-
-// test('창 제목은 Window+창번호로 한다', () => {
-//   const results = render(App)
-//   expect(results.getByText('Vite + Svelte')).toBeTruthy()
-// })
