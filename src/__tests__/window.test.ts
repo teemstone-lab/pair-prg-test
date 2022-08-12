@@ -47,3 +47,11 @@ test('X 버튼을 클릭하면 창을 닫는 기능을 동작시킨다.', async 
   const afterWindowCount = results.getAllByRole('gridcell').length
   expect(beforeWindowCount - 1).toEqual(afterWindowCount)
 })
+
+test('Window 상단에 마우스를 올려놓으면 포인터의 모양을 바꾼다', () => {
+  const results = render(App)
+  const target = results.getAllByRole('tab')[0]
+  expect(target).toHaveStyle({ cursor: 'move' })
+})
+
+// await userEvent.pointer({ pointerName: 'Pointer', target })

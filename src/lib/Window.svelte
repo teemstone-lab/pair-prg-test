@@ -21,10 +21,10 @@
 <div role="grid" id="panel">
   {#each windowObjs as window_obj}
     <div role="gridcell" id={window_obj} class="window_obj">
-      <div id={`${window_obj}_topbar`} class="window_topbar">
+      <div role="tab" id={`${window_obj}_topbar`} class="window_topbar">
         {window_obj}
       </div>
-      <div id={`${window_obj}_content`} class="window_content">
+      <div role="tabpanel" id={`${window_obj}_content`} class="window_content">
         <button class="btn_close" on:click={closeWindow(window_obj)}>X</button>
       </div>
     </div>
@@ -55,6 +55,7 @@
   .window_topbar {
     background: #eeeeee;
     min-height: 10px;
+    cursor: move;
   }
 
   .btn_close {

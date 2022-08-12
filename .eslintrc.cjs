@@ -28,7 +28,9 @@ module.exports = {
         devDependencies: true
       }
     ],
-    'import/no-mutable-exports': 'off'
+    'import/no-mutable-exports': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-call': 'off'
   },
   overrides: [
     {
