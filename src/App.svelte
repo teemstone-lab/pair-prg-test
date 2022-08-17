@@ -2,6 +2,18 @@
   import svelteLogo from './assets/svelte.svg'
   import Counter from './lib/Counter.svelte'
   import Window from './lib/Window.svelte'
+  import PaneObject from './lib/PaneObject.svelte'
+
+  const paneObject = {
+    type: 'h',
+    left: {
+      type: 'v',
+      down: { type: 'v' }
+    },
+    right: {
+      type: 'v'
+    }
+  }
 </script>
 
 <main>
@@ -20,6 +32,9 @@
   </div>
   <div class="window">
     <Window />
+  </div>
+  <div class="wrapper">
+    <PaneObject {paneObject} />
   </div>
 
   <p>
@@ -45,5 +60,11 @@
   }
   .read-the-docs {
     color: #888;
+  }
+  div.wrapper {
+    width: 95%;
+    height: 400px;
+    margin: auto;
+    background: #ffff00;
   }
 </style>
