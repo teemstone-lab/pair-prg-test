@@ -30,7 +30,11 @@ module.exports = {
     ],
     'import/no-mutable-exports': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
-    '@typescript-eslint/no-unsafe-call': 'off'
+    '@typescript-eslint/no-unsafe-call': 'off',
+    '@typescript-eslint/no-unsafe-return': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'import/prefer-default-export': 'off'
   },
   overrides: [
     {
