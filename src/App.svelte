@@ -8,10 +8,17 @@
     type: 'h',
     left: {
       type: 'v',
-      down: { type: 'v' }
+      top: {
+        type: 'h',
+        left: { type: 'c' },
+        right: { type: 'c' }
+      },
+      down: { type: 'c' }
     },
     right: {
-      type: 'v'
+      type: 'h',
+      left: { type: 'v', top: { type: 'c' }, down: { type: 'c' } },
+      right: { type: 'c' }
     }
   }
 </script>

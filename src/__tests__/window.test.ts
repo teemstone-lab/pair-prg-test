@@ -55,3 +55,8 @@ test('Window 상단에 마우스를 올려놓으면 포인터의 모양을 바�
 })
 
 // await userEvent.pointer({ pointerName: 'Pointer', target })
+
+test('페이지 로드 시 창을 놓을 수 있는 공간이 존재해야 함', () => {
+  const results = render(App)
+  expect(results.getByRole('dialog')).toBeTruthy()
+})
