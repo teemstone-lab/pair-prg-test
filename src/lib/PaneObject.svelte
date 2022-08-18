@@ -8,12 +8,20 @@
   <HSplitPane>
     <left slot="left">
       {#if paneObject.left}
-        <svelte:self paneObject={paneObject.left} />
+        {#if paneObject.left.type === 'c'}
+          <div>Cell</div>
+        {:else}
+          <svelte:self paneObject={paneObject.left} />
+        {/if}
       {/if}
     </left>
     <right slot="right">
       {#if paneObject.right}
-        <svelte:self paneObject={paneObject.right} />
+        {#if paneObject.right.type === 'c'}
+          <div>Cell</div>
+        {:else}
+          <svelte:self paneObject={paneObject.right} />
+        {/if}
       {/if}
     </right>
   </HSplitPane>
@@ -21,12 +29,20 @@
   <VSplitPane>
     <top slot="top">
       {#if paneObject.top}
-        <svelte:self paneObject={paneObject.top} />
+        {#if paneObject.top.type === 'c'}
+          <div>Cell</div>
+        {:else}
+          <svelte:self paneObject={paneObject.top} />
+        {/if}
       {/if}
     </top>
     <down slot="down">
       {#if paneObject.down}
-        <svelte:self paneObject={paneObject.down} />
+        {#if paneObject.down.type === 'c'}
+          <div>Cell</div>
+        {:else}
+          <svelte:self paneObject={paneObject.down} />
+        {/if}
       {/if}
     </down>
   </VSplitPane>
